@@ -1,0 +1,14 @@
+This folder includes the pixel method of ROI transforming. Main procedure includes 3 steps.
+1.transform the BMP picture to JPEG 
+2.use YOLO_v1 simultaneously to detect region of interests(ROI)
+3.use AES encryption method to encrypt the ROI while other regions matain invariant.
+
+requirment:
+tensorflow,cv2,numpy,scipy,PIL
+
+run:
+cd /home/JPEG ROI encryption/pixel ROI encryption/yolo_v1_BMP
+python demo.py 
+cd ../JPEG+AES
+python demo.py
+
