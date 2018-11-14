@@ -1,0 +1,16 @@
+This folder includes the bitstream method of ROI transforming. It is the only method that can both encrypt the ROI and revert to the original bitstream. It can be used in the high_accuracy_requirment condition such as military affairs. Main procedure includes 3 steps.
+1.huffman decode in JPEG stream using JPEG standard
+2.robust real_time face detection
+3.JPEG image encryption with improved format compatibility and file size preservation(upload later)
+
+requirment:
+cv2,numpy
+
+run:
+cd /home/zsa/JPEG ROI encryption/bitstream ROI encryption/JPEG bitstream huffman_decode
+g++ -c tinyjpeg.cxx -o tiny.o
+g++ -c huff.cxx -o huff.o
+g++ huff.o tiny.o -o hao
+./hao
+python encode.py
+(to be continued)
